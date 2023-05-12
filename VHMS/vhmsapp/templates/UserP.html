@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>User Registration Form</title>
+ <style>
+  .form-container {
+   max-width: 500px;
+   margin: 0 auto;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   background-color: #f9f9f9;
+  }
+  .avatar {
+   display: block;
+   margin: 0 auto;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   background-color: #ddd;
+  }
+  .form-group {
+   margin-bottom: 15px;
+  }
+  .form-group label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+  }
+  .form-group input {
+   width: 100%;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+  }
+  .form-group input[type="submit"] {
+   background-color: #4CAF50;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+  }
+ </style>
+</head>
+<body>
+ <div class="form-container">
+  <h2>User Registration Form</h2>
+  <img src="C:\Users\abhij\OneDrive\Pictures\sample-avatar.jpg" alt="Avatar Logo" class="avatar">
+  <form>
+   <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+   </div>
+   <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+   </div>
+   <div class="form-group">
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" placeholder="Enter your phone Number" required>
+</div>
+   <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+   </div>
+   <div class="form-group">
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+   </div>
+   <div class="form-group">
+    <input type="submit" value="Register">
+   </div>
+  </form><div style="position: fixed; bottom: 0; right:0; width: 100px; height: 150px; background-color: lightgray; padding: 10px;">
+  <form>
+    <label for="pet-name">Pet Name:</label>
+    <input type="text" id="pet-name" name="pet-name"><br><br>
+    <button type="submit">Add Details</button>
+  </form>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.column {
+			display: inline-block;
+			vertical-align: middle;
+			background-color: #f2f2f2;
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+			box-shadow: 0 0 10px grey;
+		}
+		
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 6px 12px;
+			border: none;
+			border-radius: 50%;
+			font-size: 20px;
+			line-height: 1;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		
+		.btn:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="column">
+		<button class="btn">+</button>
+		<p>Pets</p>
+	</div>
+</body>
+</html>

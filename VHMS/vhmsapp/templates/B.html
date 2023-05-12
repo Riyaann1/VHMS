@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+   {% load static %}
+<html>
+<head>
+  <title>Veterinary Hospital Management</title>
+  <style>
+    body {
+      background-image: url('A.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    <style>
+      body {
+        background-image: url('{% static "images/cute-puppy.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  <style>
+    form {
+      width: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+    
+    input[type="submit"] {
+      background-color: #008CBA;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <h2>Veterinary Hospital Management</h2>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Sign In">
+  </form>
+</body>
+</html>
+
+
+
+
+
+<h1> Users database</h1>
+
+
+{% for item in AnimalOwner%}
+  <strong>Name:{{ item.fname}}  {{item.lname}}<br/></strong>
+  Email:{{item.email}}
+{% endfor %}
+
+{% block content %}
+
+{% endblock %}

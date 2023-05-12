@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>CSS Website Layout</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+          body {
+               margin: 0;
+          }
+
+          /* Style the header */
+          /*.header {
+               background-color: #080bf3;
+               padding: 20px;
+               text-align: center;
+              
+          }*/
+          .p {
+                     background-image: url("11.gif");
+                     height: 15vh;
+                     background-size:cover;
+                     padding: 20px;
+               text-align: center;
+               }
+     </style>
+</head>
+<body>
+
+     <div class="p">
+          <p>
+          <h1>VETERINARY CLINIC</h1></p>
+     </div>
+
+</body>
+<head>
+     <style>
+     .btn-group .button {
+       background-color: #73c6b6; /* Green */
+       border: none;
+       color: white;
+       padding: 15px 95px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 20px;
+       cursor: pointer;
+       float: left;
+     }
+     
+     .btn-group .button:hover {
+       background-color: #0e6655;
+     }
+     </style>
+     </head>
+     
+<div class="btn-group">
+     <button class="button">Find Doctor</button>
+     <button class="button">Medical Info</button>
+     <button class="button">Hospital Direction</button>
+     <button class="button">Appointment</button>
+     <button class="button">Contact Us</button>
+   </div>
+   <style>
+     .search-container {
+display: flex;
+align-items: center;
+margin: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+padding: 5px;
+}
+
+.search-container input[type="text"] {
+flex: 1;
+border: none;
+padding: 5px;
+}
+
+.search-container button[type="submit"] {
+background-color: #73c6b6;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+background-color: #73c6b6;
+}
+
+ </style>
+ <body>
+     <div class="search-container">
+         <input type="text" placeholder="Search...">
+         <button type="submit"><i class="fa fa-search"></i></button>
+       </div>
+       
+ </body>
+   <head>
+     <style>
+          .left {
+               float: left;
+               width: 300px;
+               border: 3px solid #73c6b6;
+               padding: 10px;
+          }
+          .right {
+               float: right;
+               width: 300px;
+               border: 3px solid #73c6b6;
+               padding: 10px;
+          }
+         form {
+             display: flex;
+             flex-direction: column;
+             max-width: 500px;
+             margin: 0 auto;
+         }
+
+         label {
+             font-weight: bold;
+             margin-bottom: 8px;
+         }
+
+         input[type="text"],
+         input[type="email"],
+         input[type="tel"] {
+             padding: 8px;
+             margin-bottom: 16px;
+             border: 1px solid #ccc;
+             border-radius: 4px;
+         }
+        
+         #pet-list li {
+               font-size: 16px;
+               color: #0e6655;
+          }
+
+          /* Add some spacing between the list items */
+          #pet-list li + li {
+                margin-top: 10px;
+          }
+
+     </style>
+ </head>
+ <body>
+     <div class="left">
+          <form>
+               <label for="name">Name of Owner:</label>
+               <input type="text" id="name" name="name" autocomplete="name">
+               
+               <label for="email">Email Id:</label>
+               <input type="email" id="email" name="email" autocomplete="email">
+               
+               <label for="phone">Phone:</label>
+               <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </form>
+     </div>
+    <div class="right">
+          <form>
+               <body>
+                    <h1>List of Pets</h1>
+                    <ul id="pet-list">
+                    </ul>
+                    <button id="add-pet-btn">Add Pet</button>
+                    <script>
+                         const petList = document.getElementById('pet-list');
+                         const addPetBtn = document.getElementById('add-pet-btn');
+                         let pets = [];
+
+                         addPetBtn.addEventListener('click', () => {
+                         const petName = prompt('Enter pet name:');
+                         pets.push(petName);
+                         renderPetList();
+                         });
+
+                         function renderPetList() {
+                         petList.innerHTML = '';
+                         pets.forEach(petName => {
+                              const petItem = document.createElement('li');
+                              petItem.textContent = petName;
+                              petList.appendChild(petItem);
+                         });
+                         }
+                    </script>
+                </body>
+          </form>
+    </div>
+ </body>
+</html>

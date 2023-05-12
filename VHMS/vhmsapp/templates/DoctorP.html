@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/DoctorP.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Profile</h1>
+
+        <div class="section">
+            <h2>Information</h2>
+            <p>{{ doctor_info }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Credentials</h2>
+            <ul>
+                {% for credential in doctor_credentials %}
+                    <li>{{ credential }}</li>
+                {% empty %}
+                    <li>No credentials available</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pet Owner</th>
+                        <th>Appointment Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for appointment in appointments %}
+                        <tr>
+                            <td>{{ appointment.pet_owner }}</td>
+                            <td>{{ appointment.date }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="2">No appointments</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Animals Under Care</h2>
+            <ul>
+                {% for animal in animals %}
+                    <li>{{ animal.name }} - {{ animal.medical_history }}</li>
+                {% empty %}
+                    <li>No animals under care</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
